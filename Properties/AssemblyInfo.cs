@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using MelonLoader;
 using GuaranteedCamoNets;
 
-[assembly: MelonInfo(typeof(GuaranteedCamoNetsClass), "GuaranteedCamoNets", "1.0.0", "Qwertyryo")]
+[assembly: MelonInfo(typeof(GuaranteedCamoNetsClass), "GuaranteedCamoNets", "1.1.0", "Qwertyryo")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 // General Information about an assembly is controlled through the following
