@@ -14,7 +14,7 @@ If you don't see a vehicle in the config file, it probably means that vehicle ca
 This mod requires MelonLoader Version 0.6.1.
 This mod does not require the Vehicle Preloader or Texture Loader.
 
-To install, extract the "GuaranteedCamoNets.dll" file from releases and unzip the "GuaranteedCamoNets" assets folder into the /mods/ folder. 
+To install, extract the "GuaranteedCamoNets.dll" file from releases put it into the /mods/ folder. 
 
 ***Acknowledgements***  
 Programming: Qwertyryo
