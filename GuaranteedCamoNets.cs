@@ -40,6 +40,7 @@ namespace GuaranteedCamoNets
             { "LEOA1A2",       "LEO1A1A2"       },
             { "LEOA1A3",       "LEO1A1A3"       },
             { "LEOA1A4",       "LEO1A1A4"       },
+            {"LEO1A4", "LEO1A4"},
             { "M1",            "M1"            },
             { "M1IP_Abrams",   "M1IP Abrams"   },
             { "M60A1",         "M60A1"         },
@@ -113,7 +114,7 @@ namespace GuaranteedCamoNets
                 if (!vehiclePrefs.ContainsKey(vehicle.UniqueName)) { continue; }
                 bool enable = vehiclePrefs[vehicle.UniqueName].Value;
 
-                //
+            
                    
 
                 switch (vehicle.UniqueName)
@@ -489,6 +490,20 @@ namespace GuaranteedCamoNets
                             if (p == null) MelonLogger.Error("LEO1A3: path not found: LEO1A1A1_rig/HULL/TURRET/1A3 mantlet/1A3 mantlet net"); else p.gameObject.SetActive(enable);
                             p = vehicle.transform.Find("LEO1A1A1_rig/HULL/TURRET/1A3 mantlet/1A3 muzzle/1A3  gun net");
                             if (p == null) MelonLogger.Error("LEO1A3: path not found: LEO1A1A1_rig/HULL/TURRET/1A3 mantlet/1A3 muzzle/1A3  gun net"); else p.gameObject.SetActive(enable);
+
+                            break;
+                        }
+                    case "LEO1A4":
+                        {
+                            Transform p;
+                            p = vehicle.transform.Find("LEO1A1A1_rig/HULL/1A3 hull net");
+                            if (p == null) MelonLogger.Error("LEO1A4: path not found: LEO1A1A1_rig/HULL/1A3 hull net"); else p.gameObject.SetActive(enable);
+                            p = vehicle.transform.Find("LEO1A1A1_rig/HULL/TURRET/1A3 turret net");
+                            if (p == null) MelonLogger.Error("LEO1A4: path not found: LEO1A1A1_rig/HULL/TURRET/1A3 turret net"); else p.gameObject.SetActive(enable);
+                            p = vehicle.transform.Find("LEO1A1A1_rig/HULL/TURRET/1A3 mantlet/1A3 mantlet net");
+                            if (p == null) MelonLogger.Error("LEO1A4: path not found: LEO1A1A1_rig/HULL/TURRET/1A3 mantlet/1A3 mantlet net"); else p.gameObject.SetActive(enable);
+                            p = vehicle.transform.Find("LEO1A1A1_rig/HULL/TURRET/1A3 mantlet/1A3 muzzle/1A3  gun net");
+                            if (p == null) MelonLogger.Error("LEO1A4: path not found: LEO1A1A1_rig/HULL/TURRET/1A3 mantlet/1A3 muzzle/1A3  gun net"); else p.gameObject.SetActive(enable);
 
                             break;
                         }
