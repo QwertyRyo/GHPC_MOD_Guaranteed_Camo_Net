@@ -16,5 +16,5 @@ Programming: Qwertyryo
 
 **Changelog**  
 1.0 - Base release  
-1.1 - Updated to support Leopard 1A4
+1.1 - Updated to support Leopard 1A4  
 1.1.1 - Updated to support new Leopard names
