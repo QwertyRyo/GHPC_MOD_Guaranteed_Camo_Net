@@ -53,8 +53,11 @@ namespace GuaranteedCamoNets
             { "MARDERA1PLUS",  "MARDERA1PLUS"  },
             { "MARDERA1MINUS", "MARDERA1MINUS" },
             { "MARDERA1MINUS_NO_ATGM", "MARDERA1_NO_ATGM" },
+            {"MARDER1A2", 
+            "MARDER1A2"},
             { "M113G",         "M113G"         },
             { "BRDM2",         "BRDM2"         },
+            {"BRDM2_USSR", "BRDM2_SA"},
             { "BMP1_GDR",          "BMP1"          },
             { "BMP1_USSR",          "BMP1_SA"          },
             { "BMP1P_GDR",         "BMP1P"         },
@@ -618,6 +621,7 @@ namespace GuaranteedCamoNets
                             if (p == null) MelonLogger.Error("MARDER1A2: path not found: Marder1A1_rig/hull/turret/gun/Marder gun net"); else p.gameObject.SetActive(enable);
                             break;
                         }
+                    case "BRDM2_SA":
                     case "BRDM2":
                     {
                         Transform p;
@@ -627,6 +631,8 @@ namespace GuaranteedCamoNets
                         if (p == null) MelonLogger.Error("BRDM2: path not found: BRDM2_rig/HULL/TURRET/brdm turret net"); else p.gameObject.SetActive(enable);
                         p = vehicle.transform.Find("BRDM2_rig/HULL/TURRET/GUN/brdm gun net");
                         if (p == null) MelonLogger.Error("BRDM2: path not found: BRDM2_rig/HULL/TURRET/GUN/brdm gun net"); else p.gameObject.SetActive(enable);
+                        p = vehicle.transform.Find("BRDM2_rig/HULL/shutters/brdm shutter net");
+                        if (p == null) MelonLogger.Error("BRDM2: path not found: BRDM2_rig/HULL/shutters/brdm shutter net"); else p.gameObject.SetActive(enable);
                         break;
                     }
                     case "T62":
