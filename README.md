@@ -14,6 +14,11 @@ Programming: Qwertyryo
 
 **Changelog**  
 1.0 - Base release  
+
 1.1 - Updated to support Leopard 1A4  
+
 1.1.1 - Updated to support new Leopard names
+
 1.2 - Fixed bug where Marder 1A2 and BRDM-2 USSR were unavailable, added support for BRDM shutter nets.
+
+1.3 - Added Leopard 2 and variants
