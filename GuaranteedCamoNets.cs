@@ -43,6 +43,10 @@ namespace GuaranteedCamoNets
             {"LEO1A4", "LEO1A4"},
             { "M1",            "M1"            },
             { "M1IP_Abrams",   "M1IP Abrams"   },
+            {"Leopard_2", "LEO2"},
+            {"Leopard_2A1", "LEO2A1"},
+            {"Leopard_2A2", "LEO2A2"},
+            {"Leopard_2A3", "LEO2A3"},
             { "M60A1",         "M60A1"         },
             { "M60A1_AOS",      "M60A1AOS"      },
             { "M60A1_RISE_PASSIVE",    "M60A1RISEP"    },
@@ -75,6 +79,9 @@ namespace GuaranteedCamoNets
             { "T64B1_obr_1984",          "T64B1"          },
             { "T64B_obr_1984",          "T64B"          },
             { "T80B",          "T80B"          },
+
+            
+
             
         };
 
@@ -122,7 +129,22 @@ namespace GuaranteedCamoNets
 
                 switch (vehicle.UniqueName)
                 {
-
+                    case "LEO2":
+                    case "LEO2A1":
+                    case "LEO2A2":
+                    case "LEO2A3":
+                        {
+                            Transform p;
+                            p = vehicle.transform.Find("leo2_rig/hull/turret/net_turret");
+                            if (p == null) MelonLogger.Error($"{vehicle.UniqueName}: path not found: leo2_rig/hull/turret/net_turret"); else p.gameObject.SetActive(enable);
+                            p = vehicle.transform.Find("leo2_rig/hull/turret/mantlet/net_gun");
+                            if (p == null) MelonLogger.Error($"{vehicle.UniqueName}: path not found: leo2_rig/hull/turret/mantlet/net_gun"); else p.gameObject.SetActive(enable);
+                            p = vehicle.transform.Find("leo2_rig/hull/turret/mantlet/muzzle/net_muzzle");
+                            if (p == null) MelonLogger.Error($"{vehicle.UniqueName}: path not found: leo2_rig/hull/turret/mantlet/muzzle/net_muzzle"); else p.gameObject.SetActive(enable);
+                            p = vehicle.transform.Find("LEO2_camo/net_hull");
+                            if (p == null) MelonLogger.Error($"{vehicle.UniqueName}: path not found: LEO2_camo/net_hull"); else p.gameObject.SetActive(enable);
+                            break;
+                        }
                     case "T72":
                     {
                         Transform p;
