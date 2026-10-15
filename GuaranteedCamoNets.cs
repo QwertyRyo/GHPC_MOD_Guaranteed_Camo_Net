@@ -132,7 +132,7 @@ namespace GuaranteedCamoNets
                     case "LEO2":
                     case "LEO2A1":
                     case "LEO2A2":
-                    case "LEO2A3":
+                    
                         {
                             Transform p;
                             p = vehicle.transform.Find("leo2_rig/hull/turret/net_turret");
@@ -141,6 +141,22 @@ namespace GuaranteedCamoNets
                             if (p == null) MelonLogger.Error($"{vehicle.UniqueName}: path not found: leo2_rig/hull/turret/mantlet/net_gun"); else p.gameObject.SetActive(enable);
                             p = vehicle.transform.Find("leo2_rig/hull/turret/mantlet/muzzle/net_muzzle");
                             if (p == null) MelonLogger.Error($"{vehicle.UniqueName}: path not found: leo2_rig/hull/turret/mantlet/muzzle/net_muzzle"); else p.gameObject.SetActive(enable);
+                            p = vehicle.transform.Find("LEO2_camo/net_hull");
+                            if (p == null) MelonLogger.Error($"{vehicle.UniqueName}: path not found: LEO2_camo/net_hull"); else p.gameObject.SetActive(enable);
+                            break;
+                        }
+                    case "LEO2A3":
+                        {
+                            Transform p;
+                            p = vehicle.transform.Find("leo2_rig/hull/turret/net_turret");
+                            if (p == null) MelonLogger.Error($"{vehicle.UniqueName}: path not found: leo2_rig/hull/turret/net_turret"); else p.gameObject.SetActive(enable);
+                            p = vehicle.transform.Find("leo2_rig/hull/turret/mantlet/net_gun");
+                            if (p == null) MelonLogger.Error($"{vehicle.UniqueName}: path not found: leo2_rig/hull/turret/mantlet/net_gun"); else p.gameObject.SetActive(enable);
+                            p = vehicle.transform.Find("LEO2_camo/net_muzzle");
+                            if (p == null){
+                                p = vehicle.transform.Find("leo2_rig/hull/turret/mantlet/muzzle/net_muzzle");
+                                if (p == null) MelonLogger.Error($"{vehicle.UniqueName}: path not found: LEO2_rig/hull/turret/mantlet/muzzle/net_muzzle OR LEO2_camo/net_muzzle"); else p.gameObject.SetActive(enable);
+                            } else p.gameObject.SetActive(enable);
                             p = vehicle.transform.Find("LEO2_camo/net_hull");
                             if (p == null) MelonLogger.Error($"{vehicle.UniqueName}: path not found: LEO2_camo/net_hull"); else p.gameObject.SetActive(enable);
                             break;
